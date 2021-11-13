@@ -3,21 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mustacheExpress = require('mustache-express');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
 
-// view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
-var engine = mustacheExpress();
-app.engine('mustache', engine);
-
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'mustache');
+app.set('view engine', 'jsx');
+var optionsEngine = { beautify: true }
+app.engine('jsx', require('express-react-views').createEngine(optionsEngine));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -39,9 +34,10 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
+  console.log('Handle');
   // render the error page
   res.status(err.status || 500);
-  res.render('error', {message: err.message});
+  res.render('error');
 });
 
 module.exports = app;

@@ -2,12 +2,9 @@ var React = require('react');
 
 var Header = require('./shared/header');
 var Footer = require('./shared/footer');
-var HomeLogin = require('./login');
+var HomeLogin = require('./home-login');
 
 function Home(props) {
-  if (1 != 1) {
-    return <HomeLogin></HomeLogin>
-  } else {
     return <>
       <html>
         <head>
@@ -15,16 +12,16 @@ function Home(props) {
         </head>
         <body>
           <div className="container">
-          <Header></Header>
-          <div>página do sistema - {props.name}</div>
-          <Footer className="row justify-content-end"></Footer>
+            {
+              <Header userName={props.name} userLoged={1} />
+            }
+            <HomeLogin className="my-8"></HomeLogin>
+            <Footer className="row justify-content-end"></Footer>
           </div>
         </body>
       </html>
 
     </>
-
-  }
 }
 
 module.exports = Home;

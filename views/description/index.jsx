@@ -2,6 +2,8 @@ var React = require('react');
 var Header = require('../shared/header');
 var Footer = require('../shared/footer');
 
+var Description = require('./description');
+
 function Descricao() {
     return (
         <>
@@ -12,7 +14,7 @@ function Descricao() {
                 <body>
                     <div className="container">
                     <Header></Header>
-                    <div>Tela de Descrição</div>
+                    <Description></Description>
                     <Footer></Footer>
                     </div>
                 </body>

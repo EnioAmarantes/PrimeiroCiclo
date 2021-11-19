@@ -10,11 +10,13 @@ function Header(props) {
                 <div class="col-md-3 text-end">
                     {
                         props.userLoged
-                            ? <></>
-                            : <div>
+                            ?
+                            <div>
                                 <span className="m-4"><strong>Usuário Logado:</strong> {props.userName}</span>
-                                <button type="button" class="btn btn-outline-primary me-2">LogOut</button>
+                                <a href="/logout" class="btn btn-outline-primary me-2">LogOut</a>
                             </div>
+                            :
+                            <></>
                     }
                 </div>
             </header>

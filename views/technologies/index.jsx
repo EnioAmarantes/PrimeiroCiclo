@@ -2,7 +2,7 @@ var React = require('react');
 var Header = require('../shared/header');
 var Footer = require('../shared/footer');
 
-function Tecnologias() {
+function Tecnologias(props) {
     return (
         <>
             <html>
@@ -11,9 +11,11 @@ function Tecnologias() {
                 </head>
                 <body>
                     <div className="container">
-                    <Header></Header>
-                    <div>Tela de Tecnologias</div>
-                    <Footer></Footer>
+                        {
+                            <Header userName={props.userName} userLoged={props.userLoged} />
+                        }
+                        <div>Tela de Tecnologias</div>
+                        <Footer></Footer>
                     </div>
                 </body>
             </html>

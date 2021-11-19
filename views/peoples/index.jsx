@@ -2,7 +2,7 @@ var React = require('react');
 var Header = require('../shared/header');
 var Footer = require('../shared/footer');
 
-function Pessoas() {
+function Pessoas(props) {
     return (
         <>
             <html>
@@ -11,9 +11,11 @@ function Pessoas() {
                 </head>
                 <body>
                     <div className="container">
-                    <Header></Header>
-                    <div>Tela de Pessoas</div>
-                    <Footer></Footer>
+                        {
+                            <Header userName={props.userName} userLoged={props.userLoged} />
+                        }
+                        <div>Tela de Pessoas</div>
+                        <Footer></Footer>
                     </div>
                 </body>
             </html>

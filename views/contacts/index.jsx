@@ -2,7 +2,7 @@ var React = require('react');
 var Header = require('../shared/header');
 var Footer = require('../shared/footer');
 
-function Contato() {
+function Contato(props) {
     return (
         <>
             <html>
@@ -11,9 +11,11 @@ function Contato() {
                 </head>
                 <body>
                     <div className="container">
-                    <Header></Header>
-                    <div>Tela de Contato</div>
-                    <Footer></Footer>
+                        {
+                            <Header userName={props.userName} userLoged={props.userLoged} />
+                        }
+                        <div>Tela de Contato</div>
+                        <Footer></Footer>
                     </div>
                 </body>
             </html>

@@ -4,7 +4,7 @@ var Footer = require('../shared/footer');
 
 var Description = require('./description');
 
-function Descricao() {
+function Descricao(props) {
     return (
         <>
             <html>
@@ -13,9 +13,11 @@ function Descricao() {
                 </head>
                 <body>
                     <div className="container">
-                    <Header></Header>
-                    <Description></Description>
-                    <Footer></Footer>
+                        {
+                            <Header userName={props.userName} userLoged={props.userLoged} />
+                        }
+                        <Description></Description>
+                        <Footer></Footer>
                     </div>
                 </body>
             </html>

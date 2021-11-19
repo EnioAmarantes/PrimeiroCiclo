@@ -23,14 +23,14 @@ seguintes atividades:
  - ✅ Definir um template e padrão visual para o site (cabeçalho e rodapé)
  - [ ] Criar um arquivo para conter as configurações da aplicação web como senhas e
 os parâmetros necessários para o funcionamento da aplicação web
- - [ ] Criar uma página inicial para o site com um breve resumo da proposta e os links
+ - ✅ Criar uma página inicial para o site com um breve resumo da proposta e os links
 para as demais páginas, a página incial também deve possuir um formulário de
 login
- - [ ] Implementar um sistema de autenticação simples (usuário e senha
+ - ✅ Implementar um sistema de autenticação simples (usuário e senha
 armazenados no arquivo de configuração) que irão permitir acesso a uma tela
 de configuração. Exibir em todas as telas da aplicação o nome do usuário
 autenticado.
- - [ ] Realizar o logout do usuário
+ - ✅ Realizar o logout do usuário
  - [ ] Criar uma página com uma descrição mais detalhada sobre o que será
 desenvolvido
  - [ ] Criar uma página para listar as tecnologias e ferramentas que serão utilizadas

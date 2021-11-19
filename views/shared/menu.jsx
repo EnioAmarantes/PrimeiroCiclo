@@ -3,6 +3,7 @@ var React = require('react');
 function Menu() {
     return (
         <>
+        <img src="./images/adLogoMini.png" />
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
                 <li class="nav-item"><a href="/description" class="nav-link">Descrição</a></li>

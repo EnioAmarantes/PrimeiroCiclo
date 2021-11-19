@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var cookieParser = require('cookie-parser');
+require('dotenv').config();
 
 const jwt = require('jsonwebtoken');
-const SECRET = 'batatinhafrita123';
 const blacklist = [];
 
 router.use(cookieParser());
@@ -12,9 +12,8 @@ router.use(express.json());
 router.post('/login', function(req, res) {
   let user = req.body.user;
 
-  if((user === 'enio' && req.body.password === '123') 
-      || user  === 'admin' && req.body.password === '123'){
-      const token = jwt.sign({userLoged: 1, userName: req.body.user}, SECRET, {expiresIn: 300 });
+  if((user === process.env.USER && req.body.password === process.env.PASSWORD)){
+      const token = jwt.sign({userLoged: 1, userName: req.body.user}, process.env.SECRET, {expiresIn: 300 });
       res.cookie("token", token).redirect('/');
   }
   
@@ -60,7 +59,7 @@ function verifyJWT(req, res, next) {
   const index = blacklist.findIndex(item => item === token);
   if(index !== -1) return res.status(401).send("Essa página precisa estar logado para acessar.").end();
 
-  jwt.verify(token, SECRET, (err, decoded) => {
+  jwt.verify(token, process.env.SECRET, (err, decoded) => {
       if(err) return res.status(401).send("Essa página precisa estar logado para acessar.").end();
 
       req.userLoged = decoded.userLoged;
@@ -78,7 +77,7 @@ function verifyLoged(req, res, next){
     req.userName = "";
   }
 
-  jwt.verify(token, SECRET, (err, decoded) => {
+  jwt.verify(token, process.env.SECRET, (err, decoded) => {
     if(err) {
       req.userLoged = 0;
       req.userName = "";

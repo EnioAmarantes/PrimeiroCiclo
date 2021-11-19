@@ -21,7 +21,7 @@ seguintes atividades:
  - ✅ Definir um nome (e um logo) para o sistema
  - ✅ Criar um repositório na plataforma GitHub
  - ✅ Definir um template e padrão visual para o site (cabeçalho e rodapé)
- - [ ] Criar um arquivo para conter as configurações da aplicação web como senhas e
+ - ✅ Criar um arquivo para conter as configurações da aplicação web como senhas e
 os parâmetros necessários para o funcionamento da aplicação web
  - ✅ Criar uma página inicial para o site com um breve resumo da proposta e os links
 para as demais páginas, a página incial também deve possuir um formulário de

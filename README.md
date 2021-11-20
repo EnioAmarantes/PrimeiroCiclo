@@ -40,7 +40,7 @@ email) para os desenvolvedores da ferramenta. Os campos obrigatórios são
 nome, e-mail, assunto e mensagem
  - ✅ Criar uma página de configuração que permite o usuário modificar o nome
 exibido nas páginas
- - [ ] Criar um arquivo Dockerfile para a execução automática do projeto pelo
+ - ✅ Criar um arquivo Dockerfile para a execução automática do projeto pelo
 professor
  - [ ] Escrever o relatório técnico (para as duplas)
 

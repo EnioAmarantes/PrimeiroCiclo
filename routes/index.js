@@ -178,10 +178,10 @@ router.get('/resetconfig', function(req, res){
 function verifyJWT(req, res, next) {
   const token = req.cookies.token;
   const index = blacklist.findIndex(item => item === token);
-  if (index !== -1) return res.status(401).send("Essa página precisa estar logado para acessar.").end();
+  if (index !== -1) return res.status(401).render('./shared/errorExpected', {errorMessage : "Essa página precisa estar logado para acessar."});
 
   jwt.verify(token, process.env.SECRET, (err, decoded) => {
-    if (err) return res.status(401).send("Essa página precisa estar logado para acessar.").end();
+    if (err) return res.status(401).render('./shared/errorExpected', {errorMessage : "Essa página precisa estar logado para acessar."});
 
     req.userLoged = decoded.userLoged;
     req.userName = decoded.userName;

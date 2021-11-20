@@ -13,7 +13,14 @@ function Home(props) {
       <body>
         <div className="container">
           {
-            <Header userName={props.userName} userLoged={props.userLoged} />
+            <Header 
+              userName={props.userName} 
+              userLoged={props.userLoged}
+              homeName={props.homeName}
+              descriptionName={props.descriptionName}
+              peopleName={props.peopleName}
+              contactName={props.contactName}
+              technologiesName={props.technologiesName} />
           }
           {
             <HomeLogin userName={props.userName} userLoged={props.userLoged} />

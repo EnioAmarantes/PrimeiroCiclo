@@ -1,6 +1,7 @@
 var React = require('react');
 var Header = require('../shared/header');
 var Footer = require('../shared/footer');
+var Contacts = require('./contacts');
 
 function Contato(props) {
     return (
@@ -12,9 +13,16 @@ function Contato(props) {
                 <body>
                     <div className="container">
                         {
-                            <Header userName={props.userName} userLoged={props.userLoged} />
+                            <Header
+                                userName={props.userName}
+                                userLoged={props.userLoged}
+                                homeName={props.homeName}
+                                descriptionName={props.descriptionName}
+                                peopleName={props.peopleName}
+                                contactName={props.contactName}
+                                technologiesName={props.technologiesName} />
                         }
-                        <div>Tela de Contato</div>
+                        <Contacts></Contacts>
                         <Footer></Footer>
                     </div>
                 </body>

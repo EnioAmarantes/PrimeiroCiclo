@@ -1,6 +1,7 @@
 var React = require('react');
 var Header = require('../shared/header');
 var Footer = require('../shared/footer');
+var Configurations = require('./configurations');
 
 function Configuracoes(props) {
     return (
@@ -12,9 +13,21 @@ function Configuracoes(props) {
                 <body>
                     <div className="container">
                         {
-                            <Header userName={props.userName} userLoged={props.userLoged} />
+                            <Header
+                                userName={props.userName}
+                                userLoged={props.userLoged}
+                                homeName={props.homeName}
+                                descriptionName={props.descriptionName}
+                                peopleName={props.peopleName}
+                                contactName={props.contactName}
+                                technologiesName={props.technologiesName} />
                         }
-                        <div>Tela de Configurações</div>
+                        <Configurations                                 
+                                homeName={props.homeName}
+                                descriptionName={props.descriptionName}
+                                peopleName={props.peopleName}
+                                contactName={props.contactName}
+                                technologiesName={props.technologiesName} />
                         <Footer></Footer>
                     </div>
                 </body>

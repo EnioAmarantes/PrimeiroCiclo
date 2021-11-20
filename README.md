@@ -31,14 +31,14 @@ armazenados no arquivo de configuração) que irão permitir acesso a uma tela
 de configuração. Exibir em todas as telas da aplicação o nome do usuário
 autenticado.
  - ✅ Realizar o logout do usuário
- - [ ] Criar uma página com uma descrição mais detalhada sobre o que será
+ - ✅ Criar uma página com uma descrição mais detalhada sobre o que será
 desenvolvido
- - [ ] Criar uma página para listar as tecnologias e ferramentas que serão utilizadas
- - [ ] Criar uma página para descrever as pessoas envolvidas no projeto
- - [ ] Criar uma página de contato, no qual será possível enviar uma mensagem (por
+ - ✅ Criar uma página para listar as tecnologias e ferramentas que serão utilizadas
+ - ✅ Criar uma página para descrever as pessoas envolvidas no projeto
+ - ✅ Criar uma página de contato, no qual será possível enviar uma mensagem (por
 email) para os desenvolvedores da ferramenta. Os campos obrigatórios são
 nome, e-mail, assunto e mensagem
- - [ ] Criar uma página de configuração que permite o usuário modificar o nome
+ - ✅ Criar uma página de configuração que permite o usuário modificar o nome
 exibido nas páginas
  - [ ] Criar um arquivo Dockerfile para a execução automática do projeto pelo
 professor

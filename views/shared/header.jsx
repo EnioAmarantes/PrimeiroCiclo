@@ -5,7 +5,14 @@ function Header(props) {
     return (
         <>
             <header class="d-flex justify-content-center py-3 border-bottom">
-                <Menu></Menu>
+                <Menu
+                    userName={props.userName}
+                    userLoged={props.userLoged}
+                    homeName={props.homeName}
+                    descriptionName={props.descriptionName}
+                    peopleName={props.peopleName}
+                    contactName={props.contactName}
+                    technologiesName={props.technologiesName} />
 
                 <div class="col-md-3 text-end">
                     {

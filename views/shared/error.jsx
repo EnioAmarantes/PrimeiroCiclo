@@ -1,12 +1,25 @@
 var React = require('react');
+var Footer = require('./footer');
 
-function Error(props){
-return <div class="container-fluid">
-      <h1>Testando</h1>
-    <h1>{props.message}</h1>
-    <h2>{props.error.status}</h2>
-    <pre>{props.error.stack}</pre>
-    </div>
+function Error(props) {
+  return (
+    <>
+      <html>
+        <head>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        </head>
+        <body>
+          <div className="container-fluid">
+            <h1>Algo não funcionou como esperado</h1>
+            <h2>{props.status}</h2>
+            <pre>{props.error.stack}</pre>
+            <a href="/">Voltar para a página inicial</a>
+          </div>
+          <Footer></Footer>
+        </body>
+      </html>
+    </>
+  )
 }
 
 module.exports = Error;
